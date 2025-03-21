@@ -17,8 +17,5 @@ public class DevOpsApplication {
 		SpringApplication.run(DevOpsApplication.class, args);
 	}
 
-	@GetMapping("/")
-	public String hello() {
-		return "hello";
-	}
+
 }

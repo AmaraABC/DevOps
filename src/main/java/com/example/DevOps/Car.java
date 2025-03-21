@@ -1,19 +1,41 @@
 package com.example.DevOps;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-
-import java.util.List;
-
 public class Car {
-    public static void main(String[] args) {
-        SpringApplication.run(DevOpsApplication.class, args);
+   private String brand;
+   private String plateNumber;
+   private String price;
+
+    public Car(String brand) {
+        this.brand = brand;
     }
-    @GetMapping("/cars")
-    @ResponseStatus(HttpStatus.OK)
-    @ResponseBody
-    public List
+
+    public Car(String brand, String plateNumber, String price) {
+        this.brand = brand;
+        this.plateNumber = plateNumber;
+        this.price = price;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getPlateNumber() {
+        return plateNumber;
+    }
+
+    public void setPlateNumber(String plateNumber) {
+        this.plateNumber = plateNumber;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
 }
