@@ -24,4 +24,12 @@ public class WebService {
     public Car aCar(@PathVariable("plateNumber") String plateNumber) throws Exception{
         return new Car("mark");
     }
+
+    @PutMapping("/cars/{plateNumber}")
+    @ResponseStatus(HttpStatus.OK)
+    public void rentOrReturnCar(
+            @PathVariable("plateNumber") String plateNumber,
+            @RequestParam(value = "rent", required = true) boolean rent) throws Exception {
+
+    }
 }
