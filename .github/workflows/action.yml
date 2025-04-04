@@ -1,4 +1,5 @@
 name: CI
+working-directory: /c/Users/amara/Downloads/DevOps/DevOps/
 on:
   - pull_request
 jobs:
@@ -16,4 +17,4 @@ jobs:
         working-directory: .
         run: |
           export SHELL=/bin/bash
-          ./gradlew build
+          gradlew build
