@@ -11,13 +11,6 @@ public class WebService {
         return "hello";
     }
 
-    @GetMapping("/cars")
-    @ResponseStatus(HttpStatus.OK)
-    @ResponseBody
-    public Car listOfCars() {
-        return new Car("Toyota", "2344555", "5467.99");
-    }
-
     @GetMapping("/cars/{plateNumber}")
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
@@ -30,6 +23,12 @@ public class WebService {
     public void rentOrReturnCar(
             @PathVariable("plateNumber") String plateNumber,
             @RequestParam(value = "rent", required = true) boolean rent) throws Exception {
+    }
 
+    @GetMapping("/cars")
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody
+    public Car listOfCars() {
+        return new Car("Toyota", "2344555", "5467.99");
     }
 }

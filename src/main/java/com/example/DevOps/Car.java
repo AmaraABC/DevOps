@@ -1,26 +1,26 @@
 package com.example.DevOps;
 
 public class Car {
-   private String brand;
-   private String plateNumber;
-   private String price;
+    private String mark;
+    private String plateNumber;
+    private String price;
 
-    public Car(String brand) {
-        this.brand = brand;
+    public Car(String mark) {
+        this.mark = mark;
     }
 
-    public Car(String brand, String plateNumber, String price) {
-        this.brand = brand;
+    public Car(String mark, String plateNumber, String price) {
+        this.mark = mark;
         this.plateNumber = plateNumber;
         this.price = price;
     }
 
-    public String getBrand() {
-        return brand;
+    public String getMark() {
+        return mark;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
+    public void setMark(String mark) {
+        this.mark = mark;
     }
 
     public String getPlateNumber() {
